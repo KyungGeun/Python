@@ -13,3 +13,15 @@ print(LIST * 3) # 출력 [2, 5, 7, 2, 5, 7, 2, 5, 7]
 # 문자열처럼 인덱스가 존재하기에, 인덱싱, 슬라이싱이 가능하다
 print(List[5]) # 출력: 5
 print(List[5:3:-1]) # 출력: [5, 4]
+
+# 리스트 관련 함수 sort, count, index, remove, extend
+LIST.append(8) # 마지막 인덱스에 괄호 안의 값을 추가한다.
+print(LIST) # 출력: [2, 5, 7, 8]
+LIST.reverse() # 리스트의 순서를 반전
+print(LIST) # 출력: [8, 7, 5, 2]
+LIST.insert(2,6) # 첫번째 인자값: 값을 추가하고 싶은 인덱스, 두번째 인자값: 값
+print(LIST) # 출력: [8, 7, 6, 5, 2]
+p = LIST.pop() # 인자값이 없을 경우 -1 인덱스의 값을 추출
+print(p, LIST) # 출력: 2, [8, 7, 6, 5]
+q = LIST.pop(3) # 인자값이 있을 경우 그 인덱스의 값을 추출
+print(q, LIST) # 출력: 5, [8, 7, 6]
