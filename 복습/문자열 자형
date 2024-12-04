@@ -1,0 +1,71 @@
+# 문자열: 문자나 단어등으로 구성된 문자들의 집합(큰 따옴표나, 작은 따옴표로 감싸줘야 한다.)
+#         ex) 'string', "string"
+# 작은 따옴표를 출력하고 싶을때: print(" I'm learning Python ") or print(" I\'m learning Python")
+# 큰 따옴표를 출력하고 싶을 때: print('그녀가 물었다. "저기요"') or print("그녀가 물었다. \"저기요\"")
+
+# 개행문자
+# | \b | 백스페이스
+# | \n | 새 행
+# | \t | 탭
+# | \v | 수직 탭
+# | \\ | 백슬래시
+# | \' | 작은따옴표
+# | \" | 큰따옴표
+
+# 문자열, 리스트, 튜플 등은 인덱스 번호가 존재하므로 인덱싱과 슬라이싱을 사용할 수 있다.
+# 인덱스: 해당 위치가 가리키는 번호(0부터 시작한다.)
+# 인덱싱: 0~n까지의 인덱스 중에서 하나를 가리킨다는 의미
+# 슬라이싱: 범위를 잘라낸다는 의미
+# string[시작:끝:증가]
+# string = 'string'
+# print(string[0],string[1],string[2].....) => s t r.....
+# print(string[3:]) => ing
+# print(string[:]) => string (시작부분이 비어있을 경우 0을, 끝부분이 비어있을 경우 끝을 의미)
+# print(string[:5]) => strin (끝을 포함하고 싶다면 +1을 해줘야 한다.)
+# print(string[::]) => string (증가부분이 비어있을 경우 1을 의미)
+# print(string[::-1]) => gnirts (-1인 경우, 시작부분에 끝을, 끝에 시작부분을 해줘야 뒤에서부터 읽는다.)
+
+# 덧셈 곱셈이 가능하다.
+# a = "python"
+# b = "revise"
+# print(a+b) => "pythonrevise"
+# print(a + ' ' + b + '!') => "python revise!"
+# star = '*'
+# print(star * 5) => '*****'
+
+# 문자열 관련 함수 ([]로 묶여 있을 경우 생략이 가능한 부분)
+
+s = 'Hello Python'
+# count(x:str,[start,[end]]) 문자열에서 사용시, 첫번째 인자값은 문자열만 올 수 있다.
+# print(s.count('o',2,7)) => 1 해당 문자의 개수 반환
+
+# # find(sub:str[start,[end]])
+# print(s.find('l',3,8)) => 3 해당 문자의 시작 인덱스 반환,
+# print(s.find('H',3,8)) => 없는값을 찾을시 -1 반환
+# print(s.index('l',3,8)) => 2 해당 문자의 시작 인덱스 반환
+# print(s.index('H',3,8)) => 없는값을 찾을시 오류발생(ValueError)
+
+# # join(iterable[str]) 해당 문자를 인덱스 사이사이에 추가한 값을 반환
+# # 대표적으로 iterable한 타입 - list, dict, set, str, bytes, tuple, range
+# print('/'.join(s)) => H/e/l/l/o/ /P/y/t/h/o/n
+
+# # replace(old, new,[count]) old문자를 new문자로 치환한 값을 반환
+# print(s.replace('Py','MY')) => Hello MYthon
+
+# # split([sep]) 해당 문자를 기준으로 문자열을 나누어서 리스트타입으로 반환
+# print(s.split()) => ['Hello', 'Python']
+# print(s.split('o')) => ['Hell', 'Pyth', 'n']
+# print(a.upper()) => HELLO PYTHON 문자열을 대문자로 변환후 반환
+# print(a.lower()) => hello python 문자열을 소문자로 변환 후 반환
+
+# # strip([char]) 문자열에서 연속되는 해당 문자를 제거 후 반환
+# t = "....app.le...."
+# print('|', t.lstrip('.'), '|', sep="") => |app.le....|
+# print('|', t.strip('.'), '|', sep="")  => |app.le|
+# print('|', t.rstrip('.'), '|', sep="") => |....app.le|
+
+# len() 문자열 길이 구하기
+# print(len(s)) => 12
+
+# string = 문자열
+# # iterable = 반복가능한
