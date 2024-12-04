@@ -25,3 +25,5 @@ p = LIST.pop() # 인자값이 없을 경우 -1 인덱스의 값을 추출
 print(p, LIST) # 출력: 2, [8, 7, 6, 5]
 q = LIST.pop(3) # 인자값이 있을 경우 그 인덱스의 값을 추출
 print(q, LIST) # 출력: 5, [8, 7, 6]
+LIST.sort() # 값을 오름차순으로 정렬 / 인자값에 reverse=False를 적어도
+print(LIST) # 출력: [6, 7, 8]
