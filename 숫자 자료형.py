@@ -46,7 +46,15 @@
 # a -= b
 # print(a) => 2
 
+# 복소수: 수학에서 실수와 허수의 합에 형태로 나타내는 수
+# c = complex(2,3)
+# print(c)  => (2+3j) 수학에서는 허수를 i로 표시하고, 공학에서는 j로 표시한다.
+# print(c.real) => 2.0    실수부분
+# print(c.imag) => 3.0    허수부분
+# print(c.conjugate()) # => (2-3j) 켤레복소수: 허수부의 부호를 반대로 한것
+
 # integer = 정수
 # floating point = 실수
 # arithmetic = 산술
 # operators = 조작하는 사람
+# complex = 복잡한
