@@ -2,6 +2,90 @@
 #         ex) 'string', "string"
 # 작은 따옴표를 출력하고 싶을때: print(" I'm learning Python ") or print(" I\'m learning Python")
 # 큰 따옴표를 출력하고 싶을 때: print('그녀가 물었다. "저기요"') or print("그녀가 물었다. \"저기요\"")
+i = 5
+s = str(i) # str()을 활용하여 자료형을 문자열로 변환
+print(s, type(s)) # 출력: 5 <class 'str'>
+
+# 포매팅
+sexagenary_cycle = '갑진년'
+year = 2024
+print('올해는 {}년이고, {}입니다.'.format(year,sexagenary_cycle))
+print('올해는 %d년이고, %s입니다' % (year,sexagenary_cycle))
+print(f'올해는 {year}년이고, {sexagenary_cycle}입니다.')
+
+# 개행문자
+# | \b | 백스페이스
+# | \n | 새 행
+# | \t | 탭
+# | \v | 수직 탭
+# | \\ | 백슬래시
+# | \' | 작은따옴표
+# | \" | 큰따옴표
+
+# 문자열, 리스트, 튜플 등은 인덱스 번호가 존재하므로 인덱싱과 슬라이싱을 사용할 수 있다.
+# 인덱스: 해당 위치가 가리키는 번호(0부터 시작한다.)
+# 인덱싱: 0~n까지의 인덱스 중에서 하나를 가리킨다는 의미
+# 슬라이싱: 범위를 잘라낸다는 의미
+# string[시작:끝:증가]
+string = 'string'
+print(string[0],string[1],string[2]) # 출력: s t r
+print(string[3:]) # 출력: ing
+print(string[:]) # 출력: string (시작부분이 비어있을 경우 0을, 끝부분이 비어있을 경우 끝을 의미)
+print(string[:5]) # 출력: strin (끝을 포함하고 싶다면 +1을 해줘야 한다.)
+print(string[::]) # 출력: string (증가부분이 비어있을 경우 1을 의미)
+print(string[::-1]) # 출력: gnirts (-1인 경우, 시작부분에 끝을, 끝에 시작부분을 해줘야 뒤에서부터 읽는다.)
+
+# 덧셈 곱셈이 가능하다.
+a = "python"
+b = "revise"
+print(a+b) # 출력: "pythonrevise"
+print(a + ' ' + b + '!') # 출력: "python revise!"
+star = '*'
+print(star * 5) # 출력: '*****'
+
+# 문자열 관련 함수 ([]로 묶여 있을 경우 생략이 가능한 부분)
+
+s = 'Hello Python'
+# count(x:str,[start,[end]]) 문자열에서 사용시, 첫번째 인자값은 문자열만 올 수 있다.
+print(s.count('o',2,7)) # 출력: 1 해당 문자의 개수 반환
+
+# # find(sub:str[start,[end]])
+print(s.find('l',3,8)) # 출력: 3 해당 문자의 시작 인덱스 반환,
+print(s.find('H',3,8)) # 출력: 없는값을 찾을시 -1 반환
+print(s.index('l',3,8)) # 출력: 2 해당 문자의 시작 인덱스 반환
+print(s.index('H',3,8)) # 출력: ValueError: substring not found
+
+# join(iterable[str]) 해당 문자를 인덱스 사이사이에 추가한 값을 반환
+# 대표적으로 iterable한 타입 - list, dict, set, str, bytes, tuple, range
+print('/'.join(s)) # 출력: H/e/l/l/o/ /P/y/t/h/o/n
+
+# replace(old, new,[count]) old문자를 new문자로 치환한 값을 반환
+print(s.replace('Py','MY')) # 출력: Hello MYthon
+
+# split([sep]) 해당 문자를 기준으로 문자열을 나누어서 리스트타입으로 반환
+string = ('str    ing')
+print(string.split(' ')) # 출력: ['str', '', '', '', 'ing']
+print(string.split()) # 출력: ['str', 'ing']
+# ()안이 비어있을 경우 공백을 기준으로 분리하지만 연속된 공백을 하나의 공백으로 처리하기에
+# ()안에 공백을 넣어서 출력하는 값과 다르다는 점을 알 수 있다.
+
+print(a.upper()) # 출력: HELLO PYTHON (문자열을 대문자로 변환후 반환)
+print(a.lower()) # 출력: hello python (문자열을 소문자로 변환 후 반환)
+
+# strip([char]) 문자열에서 연속되는 해당 문자를 제거 후 반환
+t = "....app.le...."
+print('|', t.lstrip('.'), '|', sep="") # 출력: |app.le....|
+print('|', t.strip('.'), '|', sep="")  # 출력: |app.le|
+print('|', t.rstrip('.'), '|', sep="") # 출력: |....app.le|
+
+# len() 문자열 길이 구하기
+print(len(s)) # 출력: 12
+
+# string = 문자열
+# # iterable = 반복가능한# 문자열: 문자나 단어등으로 구성된 문자들의 집합(큰 따옴표나, 작은 따옴표로 감싸줘야 한다.)
+#         ex) 'string', "string"
+# 작은 따옴표를 출력하고 싶을때: print(" I'm learning Python ") or print(" I\'m learning Python")
+# 큰 따옴표를 출력하고 싶을 때: print('그녀가 물었다. "저기요"') or print("그녀가 물었다. \"저기요\"")
 i = 5 
 s = str(i) # str()을 활용하여 자료형을 문자열로 변환
 print(s, type(s)) # 출력: 5 <class 'str'>
