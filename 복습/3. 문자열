@@ -2,6 +2,9 @@
 #         ex) 'string', "string"
 # 작은 따옴표를 출력하고 싶을때: print(" I'm learning Python ") or print(" I\'m learning Python")
 # 큰 따옴표를 출력하고 싶을 때: print('그녀가 물었다. "저기요"') or print("그녀가 물었다. \"저기요\"")
+i = 5 
+s = str(i) # str()을 활용하여 자료형을 문자열로 변환
+print(s, type(s)) # 출력: 5 <class 'str'>
 
 # 개행문자
 # | \b | 백스페이스
@@ -18,7 +21,7 @@
 # 슬라이싱: 범위를 잘라낸다는 의미
 # string[시작:끝:증가]
 string = 'string'
-print(string[0],string[1],string[2].....) # 출력: s t r.....
+print(string[0],string[1],string[2]) # 출력: s t r
 print(string[3:]) # 출력: ing
 print(string[:]) # 출력: string (시작부분이 비어있을 경우 0을, 끝부분이 비어있을 경우 끝을 의미)
 print(string[:5]) # 출력: strin (끝을 포함하고 싶다면 +1을 해줘야 한다.)
