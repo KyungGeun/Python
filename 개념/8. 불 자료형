@@ -1,0 +1,26 @@
+# 불 자료형: True와 False의 값만 존재하는 자료형
+a = True    # True와 False를 사용할 때는 첫 문자를 대문자로 작성!
+b = False
+# print(a, type(a)) # 출력: True <class 'bool'>
+# print(b, type(b)) # 출력: False <class 'bool'>
+
+# 자료형의 참과 거짓
+# 문자열
+print(bool('python'), bool('')) # 출력: True False
+
+# 정수형, 실수형, 복소수형
+print(bool(-3), bool(0)) # 출력: True False
+print(bool(1), bool(0)) # 출력: True False
+print(bool(3.2), bool(0.0)) # 출력: True False
+c = complex(2,5)
+print(bool(c.real),bool(c.imag)) # 출력: True True
+
+# 리스트
+print(bool([1, 2, 3]), bool([])) # 출력: True False
+
+# 튜플
+print(bool((1, 2, 3)), bool(())) # 출력: True False
+
+# 딕셔너리
+
+# None
