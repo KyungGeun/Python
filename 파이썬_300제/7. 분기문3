@@ -90,5 +90,31 @@ if human_number[-1] == tot[-1]:             # 이 조건이 참이라면
 else:                                       # 위 조건이 거짓이라면
     print('유효하지 않은 주민등록번호 입니다.') # 이 실행문을 출력
 
+# 130
+
+btc = {
+    "opening_price": "139577000",
+    "closing_price": "140150000",
+    "min_price": "139380000",
+    "max_price": "140287000",
+    "units_traded": "48.14565877",
+    "acc_trade_value": "6732757315.52425",
+    "prev_closing_price": "139652000",
+    "units_traded_24H": "673.99856204",
+    "acc_trade_value_24H": "94009813839.44188",
+    "fluctate_24H": "1770000",
+    "fluctate_rate_24H": "1.28",
+    "date": "1733675079923"
+  }
+high = float(btc["max_price"])
+low = float(btc["min_price"])
+diff = high - low
+open = float(btc["opening_price"])
+
+if open + diff > high:
+    print('상승장')
+else:
+    print('하락장')
+
 # grade = 품질
 # exchange = 교환
