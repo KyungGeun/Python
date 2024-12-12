@@ -46,17 +46,43 @@ print(a >= b) # a가 b보다 크거나 같다, 출력: True
 print(a == b) # a와 b가 같다, 출력: False
 print(a != b) # a와 b가 같지 않다, 출력: True
 
-A = True
-B = False
+T = True
+F = False
 
-if A and B: # A와 B가 둘 다 참이라면
-    print(A, B)
-if A or B: # A 또는 B가 참이라면
-    print(A, B) # 출력: True False
-if not A: # A가 아니다
-    print(A)
-if not B: # B가 아니다
-    print(B) # 출력: False
+# and: 두 조건이 True이면 True인 비교연산자
+if T and T:
+    print(T, T)
+# if input() % 2 == 0:
+#     print('짝수')
+# => not all arguments converted during string formatting
+# => 파이썬에서 문자열 포매팅을 하는데 생긴 오류
+# 하지만 위 조건을 and(앞 조건이 거짓)와 or(앞 조건이 참)를 같이 쓸 경우 실행이 된다.
+if F and input() % 2 == 0:  # 출력값: else 실행문
+    print('if 실행문')
+else: print('else 실행문')
+if T or input() % 2 == 0:   # 출력값: if 실행문
+    print("if 실행문")
+else: print('else 실행문')
+# 이유는 and와 or의 의미를 알면 알 수가 있는데, and는 두 조건이 True이면 True인 비교연산자이다. 근데 앞 조건이 False이면 뒷 조건은 의미가 없으므로 else 실행문을 실행
+# or은 두 조건 중 하나라도 True이면 True인 비교연산자이다. 근데 앞 조건이 True이면 뒷 조건은 의미가 없으므로 if 실행문을 실행
+# or: 두 조건 중 하나라도 True이면 True인 비교연산자
+if T or F:  # 출력값: True
+    print(T)
+if F or T:  # 출력값: True
+    print(T)
+if T or T:  # 출력값: True
+    print(T)
+if F or F:  # 출력값: False
+    print(T)
+else: print(F)
+
+# not: ~가 아니다
+if not T:   # 출력값: F
+    print('T')
+else: print('F')
+if not F:   # 출력값: T
+    print('T')
+else: print('F')
 
 a = 5
 b = 'p'
